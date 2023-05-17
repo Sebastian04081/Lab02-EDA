@@ -8,4 +8,9 @@ public class ejer01{
         
         System.out.println("");
     }
+
+    public int[] invertirArray(int[]A){
+        int[] Ain = {};
+        return Ain;
+    }
 }
