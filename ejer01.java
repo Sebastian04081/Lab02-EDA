@@ -1,8 +1,11 @@
+import java.util.*;
 public class ejer01{
     /**
      * @param args
      */
     public static void main(String[]args){
-        System.out.println("Holaaa");
+        int arreglo[]={1,2,3,4,5};
+        
+        System.out.println("");
     }
 }
