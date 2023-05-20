@@ -5,6 +5,11 @@ public class List<T> {
         this.root = null;
     }
 
+    public List(T data){
+        Node<T> newRoot = new Node<T>(data);
+        this.root = newRoot; 
+    }
+
     public Node<T> getRoot() {
         return root;
     }
