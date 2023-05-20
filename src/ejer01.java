@@ -1,5 +1,6 @@
 import java.util.*;
-public class ejer01{
+
+public class ejer01 {
     /**
      * @param args
      */

@@ -1,4 +1,4 @@
-public class ejer02{
+public class ejer02 {
     //Rotacion a la izquierda
     public static void main (String [] args){
         int[] arreglo = {1,2,3,4,5};
