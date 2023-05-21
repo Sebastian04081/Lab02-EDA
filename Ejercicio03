@@ -4,7 +4,9 @@
 */
 public class ejer03 {
   public static void main(String[] args) {
-
+    int num;
+    num=5;
+    trianguloRecursivo(num);
   }
   public static void trianguloRecursivo(int base){
     if (base > 0) {
