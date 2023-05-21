@@ -1,13 +1,15 @@
 public class List<T> {
     private Node<T> root;
+    private int size;
 
     public List() {
         this.root = null;
+        this.size = 0;
     }
 
     public List(T data){
-        Node<T> newRoot = new Node<>(data);
-        this.root = newRoot; 
+        this.root = new Node<>(data);
+        this.size = 0;
     }
 
     public Node<T> getRoot() {
@@ -18,18 +20,49 @@ public class List<T> {
         this.root = root;
     }
 
+    public void add(T dato) {
+        Node<T> nuevoNodo = new Node<>(dato);
+        if (root == null) {
+            root = nuevoNodo;
+        } else {
+            Node<T> nodoActual = root;
+            while (nodoActual.getNextNode() != null) {
+                nodoActual = nodoActual.getNextNode();
+            }
+            nodoActual.setNextNode(nuevoNodo);
+        }
+        size++;
+    }
+
+    public void add(int posicion, T dato) {
+        if (posicion < 0 || posicion > size) {
+            throw new IndexOutOfBoundsException("Posición fuera de rango");
+        }
+        
+        Node<T> nuevoNodo = new Node<>(dato);
+        
+        if (posicion == 0) {
+            nuevoNodo.setNextNode(root);
+            root = nuevoNodo;
+        } else {
+            Node<T> nodoActual = root;
+            for (int i = 0; i < posicion - 1; i++) {
+                nodoActual = nodoActual.getNextNode();
+            }
+            
+            nuevoNodo.setNextNode(nodoActual.getNextNode());
+            nodoActual.setNextNode(nuevoNodo);
+        }
+        
+        size++;
+    }
+
     public boolean isEmpty() {
-        return root == null;
+        return size == 0;
     }
     
     public int getSize() {
-        int tamaño = 0;
-        Node<T> nodoActual = root;
-        while (nodoActual != null) {
-            tamaño++;
-            nodoActual = nodoActual.getNextNode();
-        }
-        return tamaño;
+        return size;
     }
     
     public boolean contains(T dato) {
@@ -45,6 +78,7 @@ public class List<T> {
     
     public void clear() {
         root = null;
+        size = 0;
     }
 
     @Override
