@@ -1,5 +1,5 @@
-public class Ejercicio02 {
-    public static void main (String [] args){
+public class Ejercicio02{
+    public static void main(String [] args){
         int[] A = {1,2,3,4,5};
         int d=2;
         int[] Aiz = rotarIzquierdaArray(A,d);
