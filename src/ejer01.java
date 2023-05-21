@@ -2,7 +2,7 @@
 public class ejer01 {
     public static void main(String[]args){
         int arreglo[]={1,2,3};
-        
+        int[] Ain = invertirArray(arreglo);
         System.out.println("");
     }
 
