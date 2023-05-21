@@ -6,7 +6,7 @@ public class List<T> {
     }
 
     public List(T data){
-        Node<T> newRoot = new Node<T>(data);
+        Node<T> newRoot = new Node<>(data);
         this.root = newRoot; 
     }
 
@@ -16,6 +16,35 @@ public class List<T> {
 
     public void setRoot(Node<T> root) {
         this.root = root;
+    }
+
+    public boolean isEmpty() {
+        return root == null;
+    }
+    
+    public int getSize() {
+        int tamaño = 0;
+        Node<T> nodoActual = root;
+        while (nodoActual != null) {
+            tamaño++;
+            nodoActual = nodoActual.getNextNode();
+        }
+        return tamaño;
+    }
+    
+    public boolean contains(T dato) {
+        Node<T> nodoActual = root;
+        while (nodoActual != null) {
+            if (nodoActual.getData().equals(dato)) {
+                return true;
+            }
+            nodoActual = nodoActual.getNextNode();
+        }
+        return false;
+    }
+    
+    public void clear() {
+        root = null;
     }
 
     @Override
