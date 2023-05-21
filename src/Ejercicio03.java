@@ -2,10 +2,10 @@
  * Viviano Bustamante Adrian 
  * Triangulo Recursivo
 */
-public class ejer03 {
+public class Ejercicio03 {
   public static void main(String[] args) {
     int num;
-    num=5;
+    num=9;
     trianguloRecursivo(num);
   }
   public static void trianguloRecursivo(int base){
