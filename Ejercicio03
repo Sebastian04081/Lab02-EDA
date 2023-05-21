@@ -4,9 +4,18 @@
 */
 public class ejer03 {
   public static void main(String[] args) {
-    
+    int num;
+    num=5;
+    trianguloRecursivo(num);
   }
-  public void trianguloRecursivo(int base){
-    
+  public static void trianguloRecursivo(int base){
+    if (base > 0) {
+            trianguloRecursivo(base -1); // Llamada recursiva 
+            for (int i = 0; i < base; i++) {
+                System.out.print(base);
+                System.out.print("* "); // Dibujar asteriscos 
+            }
+            System.out.println(); // Cambiar de línea 
+        }
   }
 }
